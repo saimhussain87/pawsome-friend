@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            background-image: url('https://wallpapercave.com/wp/wp8270084.jpg');
+            background-image: url('background.jpg'); /* Ensure this file is in the same directory */
             background-size: cover;
             background-position: center;
             font-family: 'Poppins', sans-serif;
@@ -92,36 +92,7 @@
     </style>
 </head>
 <body>
-<h1>🐾 Will You Be My PAW-some Friend? 💕</h1>
-<img class="cat" src="https://media.tenor.com/WUIEv4RR6QUAAAAj/cute-cat.gif" alt="Cat">
-<br>
-<button onclick="showResponse('yes')">Yes</button>
-<button onclick="showResponse('maybe')">Maybe</button>
-<button onclick="showResponse('no')">No</button>
-<div id="response"></div>
-<script>
-    function showResponse(answer) {
-        let response = document.getElementById("response");
-        if (answer === 'yes') {
-            response.innerHTML = "YAYYY! We're officially fur-ever friends 🐾💖💖";
-            response.style.display = "block";
-        } else if (answer === 'maybe') {
-            response.innerHTML = "Hehe... I know you'll say Yes soon 😽💕";
-            response.style.display = "block";
-        } else {
-            response.innerHTML = "😭 Why you break my little kitty heart? 💔";
-            response.style.display = "block";
-        }
-    }
-
-    for (let i = 0; i < 100; i++) {
-        let star = document.createElement("div");
-        star.classList.add("stars");
-        document.body.appendChild(star);
-        star.style.left = Math.random() * window.innerWidth + "px";
-        star.style.top = Math.random() * window.innerHeight + "px";
-        star.style.animationDuration = Math.random() * 2 + 1 + "s";
-    }
-</script>
-</body>
-</html>
+    <h1>🐾 Will You Be My PAW-some Friend? 💕</h1>
+    <img class="cat" src="cat.gif" alt="Cat"> <!-- Ensure this file is in the same directory -->
+    <br>
+    <button onclick="showResponse('yes')">Yes</button
