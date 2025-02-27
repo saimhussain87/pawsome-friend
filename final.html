@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My PAW-some Friend? 🐾💕</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('https://wallpapercave.com/wp/wp8270084.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            padding-top: 100px;
+            animation: fadeIn 2s ease-in-out;
+            overflow: hidden;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #ff69b4;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+            animation: bounce 1.5s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .cat {
+            margin-top: 50px;
+            width: 250px;
+            animation: swing 2s infinite;
+        }
+
+        @keyframes swing {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(10deg); }
+        }
+
+        button {
+            padding: 12px 25px;
+            margin: 10px;
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        button:hover {
+            background-color: #ff1493;
+            transform: scale(1.1);
+        }
+
+        #response {
+            font-size: 1.8em;
+            color: #ff69b4;
+            margin-top: 30px;
+            display: none;
+            animation: heartBeat 1.5s infinite;
+        }
+
+        @keyframes heartBeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        .stars {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 0 10px white;
+            animation: twinkle 2s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+<h1>🐾 Will You Be My PAW-some Friend? 💕</h1>
+<img class="cat" src="https://media.tenor.com/WUIEv4RR6QUAAAAj/cute-cat.gif" alt="Cat">
+<br>
+<button onclick="showResponse('yes')">Yes</button>
+<button onclick="showResponse('maybe')">Maybe</button>
+<button onclick="showResponse('no')">No</button>
+<div id="response"></div>
+<script>
+    function showResponse(answer) {
+        let response = document.getElementById("response");
+        if (answer === 'yes') {
+            response.innerHTML = "YAYYY! We're officially fur-ever friends 🐾💖💖";
+            response.style.display = "block";
+        } else if (answer === 'maybe') {
+            response.innerHTML = "Hehe... I know you'll say Yes soon 😽💕";
+            response.style.display = "block";
+        } else {
+            response.innerHTML = "😭 Why you break my little kitty heart? 💔";
+            response.style.display = "block";
+        }
+    }
+
+    for (let i = 0; i < 100; i++) {
+        let star = document.createElement("div");
+        star.classList.add("stars");
+        document.body.appendChild(star);
+        star.style.left = Math.random() * window.innerWidth + "px";
+        star.style.top = Math.random() * window.innerHeight + "px";
+        star.style.animationDuration = Math.random() * 2 + 1 + "s";
+    }
+</script>
+</body>
+</html>
